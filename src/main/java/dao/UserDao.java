@@ -5,9 +5,14 @@ import model.User;
 
 import java.util.List;
 
+
+
 public interface UserDao {
-    void createUser(User user) ;
-    User deleteUser(long userId);
-    User getUserById(long userId) ;
-    List<User> getAllUsers() ;
+    boolean addUser(User user);
+    User getUser(int id);
+    boolean updateUser(User user);
+    boolean removeUser(int id);
+    List<User> getAllUsers();
+
+
 }

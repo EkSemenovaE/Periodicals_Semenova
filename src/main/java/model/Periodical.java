@@ -1,19 +1,66 @@
 package model;
 import java.sql.Date;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Periodical {
     private int id;
-    private int userId;
     private String title;
     private String body;
     private String category;
-    private Date created;
+    private LocalDateTime dateAdded;
+
+    public Periodical(int id, String title, String body, String category, LocalDateTime dateAdded) {
+        this.id = id;
+        this.title = title;
+        this.body = body;
+        this.category = category;
+        this.dateAdded = dateAdded;
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public LocalDateTime getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(LocalDateTime dateAdded) {
+        this.dateAdded = dateAdded;
+    }
+
+
 }
 
 

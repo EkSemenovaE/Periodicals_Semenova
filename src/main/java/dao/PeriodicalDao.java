@@ -5,8 +5,13 @@ import java.util.List;
 import model.Periodical;
 
 public interface PeriodicalDao {
-    boolean createPeriodical(Periodical advert) ;
-    Periodical deletePeriodical(long id);
-    Periodical getPeriodicalById(long id);
-    List<Periodical> getPeriodicalsByUserId(long userId) throws SQLException;
+    boolean addPeriodical(Periodical periodical);
+    boolean updatePeriodical(Periodical periodical);
+    boolean removePeriodical(int id);
+    Periodical getPeriodicalById(int id);
+    List<Periodical> getAllPeriodicals() throws SQLException;
+
+
+
+
 }
